@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "SCMP Campo",
+    "slug": "scmp-movil",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0F172A",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "mx.uaslp.scmp.movil"
+    },
+    "scheme": "scmp",
+    "plugins": [
+      "expo-router",
+      "@maplibre/maplibre-react-native",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "SCMP Campo usa tu ubicación para mostrarte los pozos cercanos y registrar dónde tomas la muestra."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "SCMP Campo usa la cámara para fotografiar el pozo al tomar la muestra.",
+          "photosPermission": "SCMP Campo usa tus fotos para adjuntar una imagen a la captura.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0F172A",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
